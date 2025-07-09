@@ -2,6 +2,8 @@
 
 1. Ветки в Git. Создание веток и их отправка на GitHub
 
+
+
 После инициализации репо локально переименовал локальную главную ветку из master в main, чтобы совпадало с главной веткой на сайте GitHub
 # git branch -M main
 
@@ -52,3 +54,36 @@ Switched to branch 'develop'
 
 
 Если после изменений переключиться в ветку master обратно, то в файлах все изменения откатятся, т.к. в этой ветке их не было.
+# git checkout main
+После переключения на эту ветку все изменения в файлах откатились. Точнее подгрузились файлы из основной ветки, которая была без изменений.
+
+Если переключиться обратно на ветку develop, то все изменения снова будут доступны (буквально подгрузятся в файлы автоматом).
+
+Код, который разрабатывался в develop, не будет доступен в master/main
+Но наоборот будет доступен до момента разделения этих веток.
+*** Тут Максим показывает картинку, как разделяются ветки в Git.
+
+
+
+Проверяю коммиты локально: git log --oneline
+Пока что коммитов нет на сайте, как и нет ветки develop
+
+Чтобы отправить изменения на ГитХаб, нужно запушить их:
+# git push origin (ссылка на репо) develop (название ветки)
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.89 KiB | 1.89 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/PashaMozhet1/result_school_git-4-2/pull/new/develop
+remote:
+To https://github.com/PashaMozhet1/result_school_git-4-2.git
+ * [new branch]      develop -> develop
+
+
+После этого создалась ветка develop на Github, там же появился пункт Compare & pull request
+Там в ветке main коммитов нет, а в ветке develop все коммиты есть
