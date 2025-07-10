@@ -58,3 +58,4 @@ Switched to branch 'main'
 Для команды прописываю такие же параметры, как у git push: repo_url и branch_name
 
 Теперь в ветке main отображаются и доступны все изменения, которые я делал в файлах ветки develop, но смёрджил в ветку main.
+Теперь перехожу обратно в ветку main в VSCode через git checkout main
